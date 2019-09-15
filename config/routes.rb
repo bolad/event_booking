@@ -4,6 +4,6 @@ Rails.application.routes.draw do
       get 'available-tickets', action: :available_tickets, on: :member
     end
 
-    resources :bookings only: [:create]
+    resources :bookings, only: [:create]
   end
 end
