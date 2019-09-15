@@ -11,6 +11,8 @@ class Api::EventsController < ApplicationController
   end
 
   def available_tickets
+    available_tickets = @event.alloted_tickets - @event.sold_out_tickets
+    # render json: { available_tickets: available_tickets # ... }
   end
 
   private

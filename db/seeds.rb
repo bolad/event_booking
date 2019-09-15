@@ -9,3 +9,4 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Event.create!(name: 'Wroclaw HipHop Festival', start_at: Time.now, alloted_tickets: 500, sold_out_tickets: 0)
+User.create!(email: "test@example.com", full_name: "Michael Phelps")
