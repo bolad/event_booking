@@ -21,10 +21,10 @@ class Api::BookingsController < ApplicationController
 
         render json: @booking, status: :created
       rescue Adapters::Payment::Gateway::CardError => e
-        Rails.logger.info("Booking failed for #{e.message}")
+        Rails.logger.info("Booking failed: #{e.message}")
         render json: { error: e.message }, status: :unprocessable_entity
       rescue Adapters::Payment::Gateway::PaymentError => e
-        Rails.logger.info("Booking failed for #{e.message}")
+        Rails.logger.info("Booking failed: #{e.message}")
         render json: { error: e.message }, status: :unprocessable_entity
       end
 
@@ -48,8 +48,8 @@ class Api::BookingsController < ApplicationController
   end
 
   def check_ticket_availability
-
-    if @event.alloted_tickets == @event.sold_out_tickets
+    # binding.pry
+    if (@event.alloted_tickets == @event.sold_out_tickets) || (@event.sold_out_tickets > @event.alloted_tickets)
       render(json: { error: 'Event sold out' }, status: :unprocessable_entity) && return
     end
   end
