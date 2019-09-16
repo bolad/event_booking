@@ -12,7 +12,7 @@ RSpec.describe "Events", type: :request do
       expect(response).to be_ok
     end
 
-    it 'checkss available tickets for query' do
+    it 'checks available tickets for query' do
       post "/api/bookings/",
         params: {
           bookings: {
