@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "Event bookings", type: :request do
   describe "POST create" do
-    let!(:event) { create(:event) }
+    let(:event) { create(:event) }
     let(:tickets) { 2 }
     let(:user) { create(:user) }
 
