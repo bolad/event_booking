@@ -6,7 +6,7 @@ class Api::EventsController < ApplicationController
   end
 
   def index
-    @events = Event.all
+    @events = Event.order(created_at: :desc).paginate(page: params[:page], per_page: 5)
     render json: @events, status: :ok
   end
 
