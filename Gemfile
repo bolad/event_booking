@@ -11,6 +11,7 @@ gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
 gem 'rubocop'
 gem 'active_model_serializers'
+gem 'will_paginate', '~> 3.1.0'
 
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
