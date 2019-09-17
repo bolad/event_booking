@@ -1,4 +1,3 @@
-
 # Getting Started
 
 To start the server please follow the following steps:
@@ -12,4 +11,4 @@ To start the server please follow the following steps:
 
 # API Documentation
 
-The API documentation can be found [https://documenter.getpostman.com/view/1671539/SVmvTeja?version=latest](here).
+The API documentation can be found [here](https://documenter.getpostman.com/view/1671539/SVmvTeja?version=latest).
