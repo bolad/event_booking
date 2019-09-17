@@ -30,18 +30,18 @@ High Level features
 
 •	Pay for an event
 
-    •	when payment_error issued
-    ![Screen Shot 2019-09-16 at 10 26 43 AM](https://user-images.githubusercontent.com/14811982/65028249-10861a80-d93c-11e9-9ae9-390b88403f5a.png)
+•	when payment_error issued
+![Screen Shot 2019-09-16 at 10 26 43 AM](https://user-images.githubusercontent.com/14811982/65028249-10861a80-d93c-11e9-9ae9-390b88403f5a.png)
 
-    •	when card_error issued
-    ![Screen Shot 2019-09-16 at 10 29 16 AM](https://user-images.githubusercontent.com/14811982/65028315-2d225280-d93c-11e9-96c0-17306dbc2015.png)
+•	when card_error issued
+![Screen Shot 2019-09-16 at 10 29 16 AM](https://user-images.githubusercontent.com/14811982/65028315-2d225280-d93c-11e9-96c0-17306dbc2015.png)
 
 
-    •	when payment successful
-    ![Screen Shot 2019-09-16 at 10 30 51 AM](https://user-images.githubusercontent.com/14811982/65028428-53e08900-d93c-11e9-85f2-200030fa3184.png)
+•	when payment successful
+![Screen Shot 2019-09-16 at 10 30 51 AM](https://user-images.githubusercontent.com/14811982/65028428-53e08900-d93c-11e9-85f2-200030fa3184.png)
 
-    •	when tickets are sold out
-    ![Screen Shot 2019-09-16 at 10 33 35 AM](https://user-images.githubusercontent.com/14811982/65028503-7377b180-d93c-11e9-8d56-d98bdcebc3cf.png)
+•	when tickets are sold out
+![Screen Shot 2019-09-16 at 10 33 35 AM](https://user-images.githubusercontent.com/14811982/65028503-7377b180-d93c-11e9-8d56-d98bdcebc3cf.png)
 
 • Communication with Front End
 
