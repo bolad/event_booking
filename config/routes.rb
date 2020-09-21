@@ -3,7 +3,12 @@ Rails.application.routes.draw do
     resources :events, only: [:show, :index] do
       get 'available-tickets', action: :available_tickets, on: :member
     end
-    resources :session, only: [:create]
+    resources :sessions, only: [:create]
+    resources :registration, only: [:create]
+    delete :logout, to: "sessions#logout"
+    get :logged_in, to: "sessions#logged_in"
+
     resources :bookings, only: [:create]
   end
+
 end
