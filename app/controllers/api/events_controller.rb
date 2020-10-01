@@ -1,13 +1,13 @@
 class Api::EventsController < ApplicationController
   before_action :set_event, only: [:show, :update, :destroy, :available_tickets ]
 
-  def show
-    render json: @event
-  end
-
   def index
     @events = Event.order(created_at: :desc).paginate(page: params[:page], per_page: 5)
     render json: @events, status: :ok
+  end
+
+  def show
+    render json: @event
   end
   
   def create
@@ -45,6 +45,6 @@ class Api::EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:name, :price, :start_at, :alloted_tickets, :sold_out_tickets, :photo)
+    params.require(:event).permit(:name, :price, :start_at, :alloted_tickets, :sold_out_tickets, :image)
   end
 end
