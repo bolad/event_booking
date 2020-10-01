@@ -9,5 +9,7 @@ Rails.application.routes.draw do
     get :logged_in, to: "sessions#logged_in"
 
     resources :bookings, only: [:create]
+
+    default_url_options :host => "localhost:3001"
   end
 end

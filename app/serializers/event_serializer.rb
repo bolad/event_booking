@@ -1,4 +1,6 @@
 class EventSerializer < ActiveModel::Serializer
+  include Rails.application.routes.url_helpers
+  
   attributes :id, :name, :alloted_tickets, :sold_out_tickets, :start_date, :start_time, :image
 
   has_many :bookings
