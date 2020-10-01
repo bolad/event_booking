@@ -1,5 +1,5 @@
 class EventSerializer < ActiveModel::Serializer
-  attributes :id, :name, :alloted_tickets, :sold_out_tickets, :start_date, :start_time
+  attributes :id, :name, :alloted_tickets, :sold_out_tickets, :start_date, :start_time, :image
 
   has_many :bookings
   has_many :users
@@ -10,6 +10,19 @@ class EventSerializer < ActiveModel::Serializer
 
   def start_time
     object.start_at.strftime("%I:%M%p")
+  end
+
+  def image
+    return unless object.image.attached?
+
+    object.image.blob.attributes
+          .slice('filename', 'byte_size')
+          .merge(url: image_url)
+          .tap { |attrs| attrs['name'] = attrs.delete('filename') }
+  end
+
+  def image_url
+    url_for(object.image)
   end
 
 end
