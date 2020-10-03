@@ -1,6 +1,6 @@
 class EventSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
-  
+
   attributes :id, :name, :alloted_tickets, :sold_out_tickets, :start_date, :start_time, :image
 
   has_many :bookings
@@ -24,7 +24,7 @@ class EventSerializer < ActiveModel::Serializer
   end
 
   def image_url
-    url_for(object.image)
+    url_for(object.image.variant(resize_to_limit: [200, 200]).processed)
   end
 
 end
