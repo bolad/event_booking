@@ -24,7 +24,7 @@ class EventSerializer < ActiveModel::Serializer
   end
 
   def image_url
-    url_for(object.image.variant(resize_to_limit: [200, 200]).processed)
+    url_for(object.image)
   end
 
 end
