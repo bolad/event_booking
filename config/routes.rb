@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
+  root 'welcome#index'
   namespace :api do
+
     resources :events, only: [:show, :index, :create, :update, :destroy] do
       get 'available-tickets', action: :available_tickets, on: :member
     end
