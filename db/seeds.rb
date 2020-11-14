@@ -18,7 +18,7 @@ Event
 
 Event
 .create!(name: 'Walk Of Justice', start_at: Time.now, price: 10, alloted_tickets: 1000, sold_out_tickets: 0)
-#.image.attach(io: File.open('/Users/bolad/Downloads/blm2.jpg'), filename: 'blm')
+#.image.attach(io: File.open('https://bld-events.s3-ap-southeast-2.amazonaws.com/0kxgpnnlhgriraidz29xwpk4qugl'), filename: 'blm')
 
 Event
 .create!(name: 'Chalewote Festival', start_at: Time.now, price: 10, alloted_tickets: 750, sold_out_tickets: 0)
