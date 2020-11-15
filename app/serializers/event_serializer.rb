@@ -1,18 +1,18 @@
 class EventSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
 
-  attributes :id, :name, :alloted_tickets, :sold_out_tickets, :start_date, :start_time, :image
+  attributes :id, :name, :price, :alloted_tickets, :sold_out_tickets, :start_date, :start_time, :image
 
   has_many :bookings
   has_many :users
 
-  def start_date
-    object.start_at.strftime("%d.%m.%Y")
-  end
+  # def start_date
+  #   object.start_at.strftime("%d.%m.%Y")
+  # end
 
-  def start_time
-    object.start_at.strftime("%I:%M%p")
-  end
+  # def start_time
+  #   object.start_at.strftime("%I:%M%p")
+  # end
 
   def image
     return unless object.image.attached?

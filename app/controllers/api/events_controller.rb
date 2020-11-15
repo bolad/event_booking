@@ -1,5 +1,5 @@
 class Api::EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy, :available_tickets ]
+  before_action :set_event, only: [:show, :update, :destroy, :available_tickets ]
 
   def index
     @events = Event.order(created_at: :desc).paginate(page: params[:page], per_page: 5)
@@ -24,7 +24,7 @@ class Api::EventsController < ApplicationController
     if @event.update(event_params)    
       render json: @event, status: :ok
     else    
-        render json: @event.errors, status: :unprocessable_entity  
+      render json: @event.errors, status: :unprocessable_entity  
     end
   end 
 
