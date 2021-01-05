@@ -16,7 +16,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 
   allow do
-    origins 'https://bld-event.herokuapp.com'
+    origins 'https://bld-events-api.herokuapp.com'
 
     resource '*',
       headers: :any,
